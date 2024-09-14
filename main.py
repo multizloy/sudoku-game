@@ -60,7 +60,7 @@ class Main:
                     sys.exit()
                 if event.type == pygame.MOUSEBUTTONDOWN:
                     if not table.game_over:
-                        table.handel_mouse_click(event.pos)
+                        table.handle_mouse_click(event.pos)
             if not table.game_over:
                 my_lives = self.lives_font.render(
                     f"Lives Left: {table.lives}", True, pygame.Color("black")
