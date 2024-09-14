@@ -27,6 +27,30 @@ class Main:
         self.color = pygame.Color("darkblue")
 
     def main(self):
+        """Runs the main game loop.
+
+        This is the main entry point for the game, and is responsible for setting up
+        the game state, handling events, and updating the display.
+
+        The game loop runs until the user closes the window, at which point it exits
+        cleanly.
+
+        The game loop consists of the following steps:
+
+        1. Fill the screen with gray to erase the old frame.
+        2. Handle any events that have occurred, such as the user clicking or pressing
+           a key.
+        3. If the user has clicked, handle the click by calling the
+           `handel_mouse_click` method of the `Table` class.
+        4. Draw the lives left on the screen.
+        5. If the game is over, draw a message on the screen indicating whether the
+           user has won or lost.
+        6. Update the display to show the new frame.
+        7. Cap the frame rate to prevent the game from running too fast.
+
+        The game loop continues until the user closes the window, at which point the
+        game exits cleanly.
+        """
         table = Table(self.screen)
         while True:
             self.screen.fill("gray")
